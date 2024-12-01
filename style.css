@@ -1,0 +1,911 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+.header-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    position: relative;
+    height: 180px;
+}
+/* Dropdown Button Styling */
+.dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+.logo img {
+    height: 200px; /* Adjust logo size */
+    width: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+/* Slideshow Container */
+.slideshow-container {
+    width: 100%; /* Full width of the screen */
+    height: auto; /* Height adjusts based on content */
+    max-height: 856px; /* Optional: Set a max height for images */
+    margin: 0; /* No margin for edge-to-edge display */
+    position: relative; /* For positioning buttons */
+    overflow: hidden; /* Ensure images don't overflow the container */
+}
+/* Individual Slides */
+.slide {
+    display: none; /* Hide slides by default */
+    width: 100%; /* Make each slide span full width */
+    height: 100%; /* Ensure slides occupy full container height */
+    position: relative; /* Keep slides in proper flow */
+}
+.slide img {
+    width: 100%; /* Stretch image to full screen width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop excess parts to fit container */
+    display: block; /* Ensure no inline gaps */
+}
+/* Active Slide */
+.slide.active {
+    display: block;
+    position: relative;
+    
+}
+
+
+
+
+
+
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+.prev:hover, .next:hover {
+    background-color: #AFFE26;
+    color : black
+}
+main {
+    flex: 1; /* Make the main content grow to push footer to the bottom */
+    padding-top: 200px; /* Matches the height of the fixed header */
+}
+
+
+
+
+
+
+
+
+
+
+/* Product Section Styling */
+#product-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+/* Individual Product Containers */
+.product-container {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack image and content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content at the top */
+    width: 45%; /* Adjust for two containers side by side */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between rows for smaller screens */
+    padding: 10px;
+}
+/* Product Images */
+.product-container img {
+    width: 100%; /* Stretch to fill container */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Product Info Section */
+.product-info {
+    width: 100%; /* Make the content span full width */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack heading, description, and button */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center; /* Center content horizontally */
+    padding: 10px;
+}
+.product-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.product-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+/* Buy Button Styling */
+.buy-btn {
+    
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #AFFE26;
+    color: black;
+}
+
+
+
+
+
+
+
+
+/* Reviews Section */
+#reviews-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Light gray background for contrast */
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #ddd; /* Separate section with a top border */
+}
+/* Section Heading */
+#reviews-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+/* Review Container */
+.review-container {
+    display: flex;
+    justify-content: center; /* Center-align the reviews */
+    gap: 20px; /* Space between reviews */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+/* Individual Review Cards */
+.review {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjust for three reviews per row */
+    min-width: 250px; /* Ensure readability on smaller screens */
+    text-align: left;
+}
+/* Review Text */
+.review p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+/* Review Author */
+.review h3 {
+    font-size: 14px;
+    color: #333;
+    font-style: italic;
+    margin-top: 0;
+}
+
+
+
+
+
+
+
+/* Footer Styling */
+#footer {
+    background-color: black; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    margin-top: auto; /* Push the footer to the bottom */
+    display: flex;
+    flex-direction: column; /* Stack the footer content and footer bottom vertically */
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    padding: 0 100px; /* Add padding on left and right */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    background-color: black;
+}
+.footer-section {
+    flex: 1 1 20%; /* Flexible width with a minimum size */
+    min-width: 200px; /* Ensure readability on small screens */
+    
+}
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #AFFE26; /* Highlighted section headers */
+}
+.footer-section ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: white;
+}
+.footer-section ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: #AFFE26; /* Highlight on hover */
+}
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 0px; /* Remove any top margin */
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #555; /* Add a border to separate sections */
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+    
+}
+.footer-bottom p {
+    margin: 0;
+    
+}
+
+
+
+
+
+
+
+
+/* Navigation Styling for Mobile */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 100%; /* Position right below the header */
+        left: 0;
+        width: 100%;
+        background-color: black;
+        max-height: 0; /* Start with navigation hidden */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    nav.mobile-menu-open {
+        max-height: 600px; /* Adjust based on your content height */
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    #nav-links li {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #333;
+    }
+}
+
+/* Desktop Navigation */
+@media (min-width: 769px) {
+    .dropdown-button {
+        display: none;
+    }
+
+    #nav-links {
+        display: flex !important;
+        gap: 30px;
+    }
+}
+/* Navigation Links */
+#nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Navigation Items */
+#nav-links li {
+    margin: 0;
+}
+
+#nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+#nav-links li a:hover {
+    color: #AFFE26;
+}
+
+
+
+
+
+
+/* Responsive Design for Gaming PC Containers */
+.gaming-pc-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+
+.pc-product {
+    flex: 0 1 calc(33.333% - 20px); /* Default desktop layout */
+    max-width: 350px; /* Prevent containers from becoming too wide */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .pc-product {
+        flex: 0 1 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+}
+
+.pc-product img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.pc-specs {
+    padding: 15px;
+}
+
+.pc-specs h2 {
+    margin-bottom: 10px;
+}
+
+.pc-specs ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.configure-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    outline: none;
+}
+
+.configure-btn:hover {
+    background-color: #AFFE26;
+    color: black;
+}
+
+
+
+
+
+
+/* customising page */
+.customization-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pc-main-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin-bottom: 30px;
+    
+}
+
+.customization-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.option-container {
+    flex: 1;
+    min-width: 250px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.option-container h3 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option-item label {
+    flex-grow: 1;
+}
+
+.price-tag {
+    color: #666;
+    margin-left: 10px;
+}
+
+.total-price-container {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #AFFE26;
+    color: black;
+}
+
+
+
+
+a:-webkit-any-link {
+    color: inherit; /* Inherit text color from the parent element */
+    text-decoration: none; /* Remove underline */
+}
+
+
+
+
+.add-to-cart-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Cart Container Styles */
+#cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #AFFE26;
+    color: black;
+}
+
+.quantity {
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.remove-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ff6666;
+}
+
+.total-cost {
+    text-align: right;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #AFFE26;
+    color: black;
+}
+
+
+
+
+
+
+
+
+#checkout-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#checkout-form .option-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+#checkout-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#checkout-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#checkout-form input:focus {
+    outline: none;
+    border-color: #AFFE26;
+}
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 5px;
+    height: 15px;
+}
+
+#checkout-form input.invalid {
+    border-color: red;
+}
+
+#cart-summary {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#checkout-order-details {
+    margin-bottom: 10px;
+}
+
+#total-order-cost {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+}
+
+
+
+
+
+
+
+/* About Us Page Styling */
+
+#about-us-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center;
+}
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for content box */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: left;
+}
+
+.about-us-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-us-container p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-us-container h2 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #AFFE26; /* Highlighted border for section headers */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-us-container ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.about-us-container ul li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.about-us-container ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #AFFE26; /* Highlighted checkmark */
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Make the page responsive */
+@media (max-width: 768px) {
+    .about-us-container {
+        padding: 20px;
+    }
+
+    .about-us-container h1 {
+        font-size: 28px;
+    }
+
+    .about-us-container h2 {
+        font-size: 24px;
+    }
+
+    .about-us-container p, .about-us-container ul li {
+        font-size: 16px;}
+    
+}
+
+
+
+/* Support Page Styling */
+
+#support-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light background for the section */
+    text-align: center;
+}
+
+.support-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White content box */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.support-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.support-container p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.support-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.support-card {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    max-width: 300px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.support-card h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.support-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.support-card a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.support-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .support-options {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        gap: 15px;
+    }
+
+    .support-card {
+        flex: 1 1 100%; /* Full width for each card */
+}
+}
