@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Ultracore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo maker project.jpeg" alt="Logo">
+                </a>
+            </div>
+            
+            <button class="dropdown-button">☰</button>
+            
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="PCs.html">Gaming PCs</a></li>
+                    <li><a href="Workstations.html">Workstations</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="customization-container">
+        <div id="base-price-container" data-base-price="2000">
+            <img src="images/ultracore.avif" alt="Custom Gaming PC" class="pc-main-image">
+            
+            <div class="customization-options">
+                <!-- Processor Options -->
+                <div class="option-container">
+                    <h3>Processor</h3>
+                    <div class="option-item">
+                        <input type="radio" id="ryzen5" name="processor" data-price="0">
+                        <label for="ryzen5">AMD Ryzen 5 5600X</label>
+                        <span class="price-tag">Base Price</span>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="ryzen7" name="processor" data-price="200">
+                        <label for="ryzen7">AMD Ryzen 7 5800X</label>
+                        <span class="price-tag">+$200</span>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="ryzen9" name="processor" data-price="400">
+                        <label for="ryzen9">AMD Ryzen 9 5950X</label>
+                        <span class="price-tag">+$400</span>
+                    </div>
+                </div>
+
+                <!-- Graphics Card Options -->
+                <div class="option-container">
+                    <h3>Graphics Card</h3>
+                    <div class="option-item">
+                        <input type="radio" id="rtx3060" name="gpu" data-price="0">
+                        <label for="rtx3060">NVIDIA RTX 3060</label>
+                        <span class="price-tag">Base Price</span>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="rtx3070" name="gpu" data-price="250">
+                        <label for="rtx3070">NVIDIA RTX 3070</label>
+                        <span class="price-tag">+$250</span>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="rtx3080" name="gpu" data-price="500">
+                        <label for="rtx3080">NVIDIA RTX 3080 Ti</label>
+                        <span class="price-tag">+$500</span>
+                    </div>
+                </div>
+
+                <!-- RAM Options -->
+                <div class="option-container">
+                    <h3>Memory</h3>
+                    <div class="option-item">
+                        <input type="radio" id="16gb" name="ram" data-price="0">
+                        <label for="16gb">16GB DDR4</label>
+                        <span class="price-tag">Base Price</span>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="32gb" name="ram" data-price="100">
+                        <label for="32gb">32GB DDR4</label>
+                        <span class="price-tag">+$100</span>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" id="64gb" name="ram" data-price="250">
+                        <label for="64gb">64GB DDR4</label>
+                        <span class="price-tag">+$250</span>
+                    </div>
+                </div>
+            </div>
+            <div class="total-price-container">
+                Total Price: $<span id="total-price"></span>
+            </div>
+        </div>
+
+        <button class="add-to-cart-btn" disabled><a href="cart.html">Add to Cart</a></button>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Products Section -->
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="PCs.html">Gaming PCs</a></li>
+                    <li><a href="Workstations.html">Workstations</a></li>
+                </ul>
+            </div>
+    
+            <!-- Company Section -->
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="support.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Need Help? Section -->
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <ul>
+                    <li><a href="support.html">Customer Support</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Us Section -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: <a href="mailto:support@thepcspecialists.com">support@thepcspecialists.com</a></li>
+                    <li>Phone: <a href="tel:+6598765432">+65 98765432</a></li>
+                    <li>Address: 123 Custom PC Street, Tech City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The PC Specialists. All rights reserved.</p>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
