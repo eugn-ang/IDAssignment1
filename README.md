@@ -1,5 +1,7 @@
 # The PC Specialists
 
+## GitHub Link
+(https://github.com/eugn-ang/IDAssignment1/)
 ## Overview
 The PC Specialists is a responsive, user-friendly website designed for a Gaming PC Company that specializes in high-performance gaming PCs. This website offers an engaging online experience, allowing users to browse, customize, and purchase gaming PCs tailored to their specific needs.
 
