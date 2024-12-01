@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The PC Specialists</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo maker project.jpeg" alt="Logo">
+                </a>
+            </div>
+            
+            <button class="dropdown-button">☰</button>
+            
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="PCs.html">Gaming PCs</a></li>
+                    <li><a href="Workstations.html">Workstations</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="slideshow">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="images/AMD_9000_Series_9800X3D_2000x.webp" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="images/0830_-_Asus_-_4000x1712_572fee81-47d6-4b7e-88ba-f574d3bfe8e0_2000x.webp" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="images/240628-ASUS-Z790-V3-Hero_Desktop_2000x.webp" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="images/0201-Banner3-4000x1712-02_2000x.webp" alt="Slide 4">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        </section>
+        
+        <section id="product-section">
+            <!-- PC Container -->
+            <div class="product-container">
+                <img src="images/desktop.avif" alt="Custom PC">
+                <div class="product-info">
+                    <h2>Gaming PC</h2>
+                    <p>
+                        Get the advantage and power through the most demanding games on the planet 
+                        with buttery smooth frame rates with our top-of-the-line gaming PCs build 
+                        to deliver unrivaled performance. We craft your dream gaming PC, down to the finest of details.
+                    </p>
+                    <button class="buy-btn"><a href="PCs.html">Buy Now</a></button>
+                </div>
+            </div>
+        
+            <!-- Workstation Container -->
+            <div class="product-container">
+                <img src="images/workstation.avif" alt="workstations">
+                <div class="product-info">
+                    <h2>Workstation</h2>
+                    <p>
+                        Our workstations are custom made for your commercial or creator applications. 
+                        Whether you are effortlessly rendering 4K videos, running AI models or tearing through 3D renders, 
+                        our workstations are designed to offer reliable world class performance that goes the extra mile.</p>
+                    <button class="buy-btn"><a href="Workstations.html">Buy Now</a></button>
+                </div>
+            </div>
+        </section>
+        <!-- review Container -->
+        <section id="reviews-section">
+            <h2>Thousands of Satisfied Customers</h2>
+            <div class="review-container">
+                <div class="review">
+                    <p>"Amazing service and top-notch PCs! My gaming experience has been elevated to the next level."</p>
+                    <h3>- Alex D.</h3>
+                </div>
+                <div class="review">
+                    <p>"The workstation I purchased handles all my rendering tasks flawlessly. Highly recommend!"</p>
+                    <h3>- Jamie R.</h3>
+                </div>
+                <div class="review">
+                    <p>"Great customer support and fast delivery. Couldn't be happier with my custom-built PC."</p>
+                    <h3>- Taylor S.</h3>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+            <!-- Products Section -->
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="PCs.html">Gaming PCs</a></li>
+                    <li><a href="Workstations.html">Workstations</a></li>
+                </ul>
+            </div>
+    
+            <!-- Company Section -->
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                    <li><a href="support.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Need Help? Section -->
+            <div class="footer-section">
+                <h3>Need Help?</h3>
+                <ul>
+                    <li><a href="support.html">Customer Support</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Us Section -->
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>Email: <a href="mailto:support@thepcspecialists.com">support@thepcspecialists.com</a></li>
+                    <li>Phone: <a href="tel:+6598765432">+65 98765432</a></li>
+                    <li>Address: 123 Custom PC Street, Tech City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The PC Specialists. All rights reserved.</p>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
